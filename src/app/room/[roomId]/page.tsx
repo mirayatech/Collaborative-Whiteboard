@@ -1,13 +1,7 @@
 import { CollaborativeApp } from "@/components/CollaborativeApp";
 import { Room } from "@/components/Room";
 
-interface PageProps {
-  params: {
-    roomId: string;
-  };
-}
-
-export default function RoomPage({ params }: PageProps) {
+export default function RoomPage({ params }: { params: { roomId: string } }) {
   return (
     <Room roomId={params.roomId}>
       <CollaborativeApp />
