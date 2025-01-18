@@ -1,12 +1,13 @@
 import { CollaborativeApp } from "@/components/CollaborativeApp";
 import { Room } from "@/components/Room";
-import { useParams } from "next/navigation";
 
-export default function RoomPage() {
-  const params = useParams();
+interface RoomPageProps {
+  params: { roomId: string };
+}
 
+export default function RoomPage({ params }: RoomPageProps) {
   return (
-    <Room roomId={params.roomId as string}>
+    <Room roomId={params.roomId}>
       <CollaborativeApp />
     </Room>
   );
