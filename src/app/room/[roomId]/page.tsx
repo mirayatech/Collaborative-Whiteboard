@@ -1,9 +1,15 @@
+import React from "react";
+
 import { CollaborativeApp } from "@/components/CollaborativeApp";
 import { Room } from "@/components/Room";
 
-export default function RoomPage({ params }: { params: { roomId: string } }) {
+interface Props {
+  params: Promise<{ roomId: string }>;
+}
+
+export default async function RoomPage({ params }: Props) {
   return (
-    <Room roomId={params.roomId}>
+    <Room roomId={(await params).roomId}>
       <CollaborativeApp />
     </Room>
   );
