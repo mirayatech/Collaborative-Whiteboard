@@ -1,5 +1,5 @@
-import { CollaborativeApp } from "./CollaborativeApp";
-import { Room } from "./Room";
+import { CollaborativeApp } from "../componenta/CollaborativeApp";
+import { Room } from "../componenta/Room";
 
 export default function Page() {
   return (
